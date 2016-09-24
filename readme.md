@@ -6,9 +6,12 @@ a simple cli logger with a prefixed [type] and a bit of color
 ## table of contents
 * [installation](#installation)
 * [use](#use)
-    * [basic](#basic)
-    * [error object](#error-object)
-    * [a btit more color](#a-bit-more-color)
+    * [log.debug( string )](#log.debug--string--)
+    * [log.error( string )](#log.error--string--)
+    * [log.error( Error )](#log.error--Error--)
+    * [log.error( Error, true )](#log.error--Error,-true--)
+    * [log.info( string )](#log.info--string--)
+    * [log.info( string_colored )](#log.info--string_colored--)
 * [license](#license)
 
 ## installation
@@ -17,43 +20,49 @@ npm install dan-nl/cli-logger --save
 ```
 
 ## use
-### basic
 ```javascript
 var log = require( 'cli-logger' );
-
+```
+#### log.debug( string )
+```javascript
 log.debug( 'my debug message' );
 // => [debug] my debug message
-
+```
+![log.debug( string )](/../snapshots/debug.png?raw=true)
+#### log.error( string )
+```javascript
 log.error( 'my error message' ); 
 // => [error] my error message
-
-log.info( 'my info message' );
-// => [info] my info message
 ```
-
-### error object
+![log.error( string )](/../snapshots/error.png?raw=true)
+#### log.error( Error )
 ```javascript
-var log = require( 'cli-logger' );
-
-log.error( new Error( 'as an error object' ) ); 
+log.error( new Error( 'my error message' ) ); 
 // => [error] as an error object
-
-log.error( new Error( 'as an error object with stack trace' ), true );
+```
+![log.error( Error )](/../snapshots/error-object.png?raw=true)
+### log.error( Error, true )
+```javascript
+log.error( new Error( 'my error message' ), true );
 // => [error] Error: as an error object with stack trace 
 // => ( stack trace lines follow )
 ```
-
-### a bit more color
+![log.error( Error, true )](/../snapshots/error-with-stacktrace.png?raw=true)
+#### log.info( string )
+```javascript
+log.info( 'my info message' );
+// => [info] my info message
+```
+![log.info( string )](/../snapshots/info.png?raw=true)
+#### log.info( string_colored )
 ```javascript
 var chalk = require( 'chalk' );
-var log = require( 'cli-logger' );
 var message = 'my message with' + chalk.cyan( ' a bit ' ) + chalk.magenta( 'more color' );
 
 log.info( message ); 
 // => [info] my message with a bit more color
 ```
-
-
+![log.info( string_colored )](/../snapshots/info-more-color.png?raw=true)
 ## license
 [MIT License][mit-license]
 
