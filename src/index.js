@@ -8,10 +8,15 @@ var info = require( './info' );
 var error = require( './error' );
 
 /**
- * @type {{debug: debug, error: error, info: info}}
+ * @type {Object} log
+ * @type {Function} log.debug
+ * @type {Function} log.error
+ * @type {Function} log.info
  */
-module.exports = {
+var log = {
   debug: debug,
   error: error,
   info: info
 };
+
+module.exports = log;

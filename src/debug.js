@@ -7,7 +7,6 @@ var chalk = require( 'chalk' );
 
 /**
  * @param {string} message
- *
  * @returns {void}
  */
 function debug( message ) {
