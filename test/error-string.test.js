@@ -1,6 +1,6 @@
 'use strict';
 
-var log = require( 'cli-logger' );
+var log = require( '../src/index' );
 var sinon = require( 'sinon' );
 var test = require( 'tap' ).test;
 
