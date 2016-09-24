@@ -47,10 +47,7 @@ log.error( new Error( 'as an error object with stack trace' ), true );
 ```javascript
 var chalk = require( 'chalk' );
 var log = require( 'cli-logger' );
-var message = 'my message with ';
-
-message += chalk.blue( 'a bit ' );
-message += chalk.magenta( 'more color' );
+var message = 'my message with' + chalk.cyan( ' a bit ' ) + chalk.magenta( 'more color' );
 
 log.info( message ); 
 // => [info] my message with a bit more color
