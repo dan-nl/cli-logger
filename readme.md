@@ -6,12 +6,12 @@ a simple cli logger with a prefixed [type] and a bit of color
 ## table of contents
 * [installation](#installation)
 * [use](#use)
-    * [log.debug( string )](#log.debug--string--)
-    * [log.error( string )](#log.error--string--)
-    * [log.error( Error )](#log.error--Error--)
-    * [log.error( Error, true )](#log.error--Error,-true--)
-    * [log.info( string )](#log.info--string--)
-    * [log.info( string_colored )](#log.info--string_colored--)
+    * [log.debug( string )](#logdebug-string-)
+    * [log.error( string )](#logerror-string-)
+    * [log.error( Error )](#logerror-error-)
+    * [log.error( Error, true )](#logerror-error-true-)
+    * [log.info( string )](#loginfo-string-)
+    * [log.info( string_colored )](#loginfo-string_colored-)
 * [license](#license)
 
 ## installation
