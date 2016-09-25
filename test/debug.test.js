@@ -13,8 +13,7 @@ test( 'log.debug( message )', function ( t ) {
 
   t.ok( console.log.calledOnce, 'should call console.log() once' );
 
-  t.ok( console.log.calledWith(
-      '[debug] ' + message ),
+  t.ok( console.log.calledWith( '[debug] ' + message ),
     'should call console.log() with [debug] plus the message provided'
   );
 
